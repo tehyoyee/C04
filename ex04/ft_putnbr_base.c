@@ -71,8 +71,8 @@ void ft_putnbr_base(int nbr, char *base)
     if (nbr == -2147483648)                 // 인트형 최솟값왓을때
     {
         write(1, "-", 1);
-        ft_print(nbr / (-base_len), base, base_len);
-        ft_print(nbr % (-base_len), base, base_len);
+        ft_print(-(nbr / base_len), base, base_len);
+        ft_print(-(nbr % base_len), base, base_len);
     }
     else if (nbr < 0)                   // 음수
     {
